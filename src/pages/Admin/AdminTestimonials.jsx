@@ -13,7 +13,7 @@ export default function AdminTestimonials() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/testimonials/")
+      .get("https://lumarisehotel.com/api/testimonials/")
       .then((res) => {
         const data = Array.isArray(res.data)
           ? res.data
@@ -44,7 +44,7 @@ export default function AdminTestimonials() {
       // UPDATE EXISTING TESTIMONIAL
       axios
         .patch(
-          `http://127.0.0.1:8000/api/testimonials/${editingId}/`,
+          `https://lumarisehotel.com/api/testimonials/${editingId}/`,
           uploadData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -60,7 +60,7 @@ export default function AdminTestimonials() {
     } else {
       // CREATE NEW TESTIMONIAL
       axios
-        .post("http://127.0.0.1:8000/api/testimonials/", uploadData, {
+        .post("https://lumarisehotel.com/api/testimonials/", uploadData, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((res) => {
@@ -84,7 +84,7 @@ export default function AdminTestimonials() {
     if (!window.confirm("Are you sure you want to delete this testimonial?")) return;
     
     axios
-      .delete(`http://127.0.0.1:8000/api/testimonials/${id}/`)
+      .delete(`https://lumarisehotel.com/api/testimonials/${id}/`)
       .then(() => {
         setTestimonials(testimonials.filter((item) => item.id !== id));
       })

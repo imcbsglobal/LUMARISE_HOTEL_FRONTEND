@@ -108,7 +108,7 @@ export default function Rooms() {
     const fetchRooms = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://127.0.0.1:8000/api/rooms/", {
+        const res = await fetch("https://lumarisehotel.com/api/rooms/", {
           signal: controller.signal,
           // If your backend supports it, you can use cache: "force-cache" in fetch options for repeated visits
         });

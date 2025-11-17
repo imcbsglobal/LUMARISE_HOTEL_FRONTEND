@@ -373,7 +373,7 @@ export default function RoomCard() {
     const fetchRoom = async () => {
       try {
         setLoading(true);
-        const res = await axios.get(`http://127.0.0.1:8000/api/rooms/${id}/`, { signal: controller.signal });
+        const res = await axios.get(`https://lumarisehotel.com/api/rooms/${id}/`, { signal: controller.signal });
         if (!mountedRef.current) return;
         setRoom(res.data);
         setCurrentImage(0);

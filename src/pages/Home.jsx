@@ -92,7 +92,7 @@ export default function Home() {
   useEffect(() => {
     const controller = new AbortController();
     axios
-      .get("http://127.0.0.1:8000/api/testimonials/", { signal: controller.signal })
+      .get("https://lumarisehotel.com/api/testimonials/", { signal: controller.signal })
       .then((res) => {
         const data = Array.isArray(res.data) ? res.data : res.data.results || res.data.data || [];
         setTestimonials(data);
@@ -108,7 +108,7 @@ export default function Home() {
     const controller = new AbortController();
     const fetchRooms = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/rooms/", { signal: controller.signal });
+        const res = await axios.get("https://lumarisehotel.com/api/rooms/", { signal: controller.signal });
         const data = Array.isArray(res.data) ? res.data : res.data.results || [];
         setRooms(data);
       } catch (err) {

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const ADMIN_WHATSAPP = "918606033337";
 
 // Always ensure backend URL contains /api
-const API_BASE = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api").replace(/\/$/, "");
+const API_BASE = (import.meta.env.VITE_API_URL || "https://lumarisehotel.com/api").replace(/\/$/, "");
 
 export default function BookingForm() {
   const [form, setForm] = useState({
