@@ -260,8 +260,8 @@ Please confirm this booking.
               <option>DULEX ROOM</option>
               <option>EXECUTIVE ROOM</option>
               <option>SUITE ROOM</option>
-              <option>DULEX ROOM (P)</option>
-              <option>EXECUTIVE ROOM (P)</option>
+              <option>PREMIUM DULEX ROOM </option>
+              <option>PREMIUM EXECUTIVE ROOM</option>
               <option>COUPLE SUITE</option>
               <option>PREMIUM SUIT ROOM</option>
               <option>DORMITORY</option>

@@ -161,8 +161,8 @@ const RoomForm = memo(function RoomForm({
         >
           <option value="">Select Room Type</option>
           <option value="COUPLE SUITE">COUPLE SUITE</option>
-          <option value="EXECUTIVE ROOM (P)">EXECUTIVE ROOM (P)</option>
-          <option value="DULEX ROOM (P)">DULEX ROOM (P)</option>
+          <option value="EXECUTIVE ROOM (P)">PREMIUM EXECUTIVE ROOM</option>
+          <option value="DULEX ROOM (P)">PREMIUM DULEX ROOM</option>
           <option value="SUITE ROOM">SUITE ROOM</option>
           <option value="DORMITRY">DORMITRY</option>
           <option value="EXECUTIVE ROOM">EXECUTIVE ROOM</option>
