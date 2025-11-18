@@ -546,7 +546,7 @@ export default function Home() {
                   <div className="flex flex-col items-center text-center px-4">
                     <div className="flex justify-center mb-8">
                       <LazyImage
-                        src={t.image ? `http://127.0.0.1:8000${t.image}` : "/default-avatar.png"}
+                        src={t.avatar }
                         alt={t.name || "Guest"}
                         className="w-20 h-20 rounded-full border-4 border-white object-cover shadow-md"
                       />

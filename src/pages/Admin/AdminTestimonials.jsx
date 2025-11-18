@@ -158,7 +158,8 @@ export default function AdminTestimonials() {
             >
               {t.avatar && (
                 <img
-                  src={`http://127.0.0.1:8000${t.avatar}`}
+                  // src={`https://lumarisehotel.com${t.avatar}`}
+                  src={t.avatar }
                   alt={t.name}
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mb-3 sm:mb-4 border-2 border-gray-200"
                 />

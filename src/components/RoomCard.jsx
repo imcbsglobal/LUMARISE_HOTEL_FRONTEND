@@ -390,7 +390,7 @@ export default function RoomCard() {
   const images = useMemo(() => {
     if (!room?.images) return [];
     return room.images
-      .map(i => (i?.image ? (i.image.startsWith('http') ? i.image : `http://127.0.0.1:8000${i.image}`) : null))
+      .map(i => (i?.image ? (i.image.startsWith('http') ? i.image : `https://lumarisehotel.com${i.image}`) : null))
       .filter(Boolean);
   }, [room?.images]);
 
