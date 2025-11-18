@@ -26,7 +26,12 @@ import { useNavigate, Link } from "react-router-dom";
 import GalleryGrid from "../components/GalleryGrid";
 
 // ✅ Optimized LazyImage Component
-const LazyImage = memo(function LazyImage({ src, alt = "", className = "", poster = "/no-image.png" }) {
+const LazyImage = memo(function LazyImage({
+  src,
+  alt = "",
+  className = "",
+  poster = "/no-image.png",
+}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -53,7 +58,11 @@ const LazyImage = memo(function LazyImage({ src, alt = "", className = "", poste
   }, []);
 
   return (
-    <div ref={ref} className={`relative overflow-hidden ${className}`} style={{ backgroundColor: "#f7f7f7" }}>
+    <div
+      ref={ref}
+      className={`relative overflow-hidden ${className}`}
+      style={{ backgroundColor: "#f7f7f7" }}
+    >
       {visible ? (
         <img
           src={src}
@@ -73,7 +82,11 @@ const LazyImage = memo(function LazyImage({ src, alt = "", className = "", poste
           }}
         />
       ) : (
-        <img src={poster} alt="placeholder" className="w-full h-full object-cover" />
+        <img
+          src={poster}
+          alt="placeholder"
+          className="w-full h-full object-cover"
+        />
       )}
     </div>
   );
@@ -92,13 +105,18 @@ export default function Home() {
   useEffect(() => {
     const controller = new AbortController();
     axios
-      .get("https://lumarisehotel.com/api/testimonials/", { signal: controller.signal })
+      .get("https://lumarisehotel.com/api/testimonials/", {
+        signal: controller.signal,
+      })
       .then((res) => {
-        const data = Array.isArray(res.data) ? res.data : res.data.results || res.data.data || [];
+        const data = Array.isArray(res.data)
+          ? res.data
+          : res.data.results || res.data.data || [];
         setTestimonials(data);
       })
       .catch((err) => {
-        if (err.name !== "CanceledError" && err.name !== "AbortError") console.error("Error fetching testimonials:", err);
+        if (err.name !== "CanceledError" && err.name !== "AbortError")
+          console.error("Error fetching testimonials:", err);
       });
     return () => controller.abort();
   }, []);
@@ -108,11 +126,16 @@ export default function Home() {
     const controller = new AbortController();
     const fetchRooms = async () => {
       try {
-        const res = await axios.get("https://lumarisehotel.com/api/rooms/", { signal: controller.signal });
-        const data = Array.isArray(res.data) ? res.data : res.data.results || [];
+        const res = await axios.get("https://lumarisehotel.com/api/rooms/", {
+          signal: controller.signal,
+        });
+        const data = Array.isArray(res.data)
+          ? res.data
+          : res.data.results || [];
         setRooms(data);
       } catch (err) {
-        if (err.name !== "CanceledError" && err.name !== "AbortError") console.error("Error fetching rooms:", err);
+        if (err.name !== "CanceledError" && err.name !== "AbortError")
+          console.error("Error fetching rooms:", err);
       }
     };
     fetchRooms();
@@ -120,52 +143,52 @@ export default function Home() {
   }, []);
 
   const facilities = [
-  {
-    icon: <FaBath className="text-3xl text-black" />,
-    title: "Hot Water",
-    desc: "24/7 hot water available for all rooms.",
-  },
-  {
-    icon: <FaBolt className="text-3xl text-black" />,
-    title: "Power Backup",
-    desc: "Uninterrupted electricity with full power backup.",
-  },
-  {
-    icon: <FaWifi className="text-3xl text-black" />,
-    title: "Free Wi-Fi",
-    desc: "High-speed Wi-Fi access throughout the property.",
-  },
-  {
-    icon: <FaCar className="text-3xl text-black" />,
-    title: "Private Parking",
-    desc: "Secure private parking for all guests.",
-  },
-  {
-    icon: <FaVideo className="text-3xl text-black" />,
-    title: "CCTV Security",
-    desc: "24/7 surveillance ensuring complete guest safety.",
-  },
-  {
-    icon: <FaBroom className="text-3xl text-black" />,
-    title: "Housekeeping",
-    desc: "Daily housekeeping to keep your stay comfortable.",
-  },
-  {
-    icon: <FaPlaneArrival className="text-3xl text-black" />,
-    title: "Pick-up Service",
-    desc: "Convenient pick-up service for guests upon request.",
-  },
-  {
-    icon: <FaPlaneDeparture className="text-3xl text-black" />,
-    title: "Drop-off Service",
-    desc: "Safe and timely drop-off service available.",
-  },
-  {
-    icon: <FaUsers className="text-3xl text-black" />,
-    title: "Tourist Access",
-    desc: "Easy access to nearby attractions and activities.",
-  },
-];
+    {
+      icon: <FaBath className="text-3xl text-black" />,
+      title: "Hot Water",
+      desc: "24/7 hot water available for all rooms.",
+    },
+    {
+      icon: <FaBolt className="text-3xl text-black" />,
+      title: "Power Backup",
+      desc: "Uninterrupted electricity with full power backup.",
+    },
+    {
+      icon: <FaWifi className="text-3xl text-black" />,
+      title: "Free Wi-Fi",
+      desc: "High-speed Wi-Fi access throughout the property.",
+    },
+    {
+      icon: <FaCar className="text-3xl text-black" />,
+      title: "Private Parking",
+      desc: "Secure private parking for all guests.",
+    },
+    {
+      icon: <FaVideo className="text-3xl text-black" />,
+      title: "CCTV Security",
+      desc: "24/7 surveillance ensuring complete guest safety.",
+    },
+    {
+      icon: <FaBroom className="text-3xl text-black" />,
+      title: "Housekeeping",
+      desc: "Daily housekeeping to keep your stay comfortable.",
+    },
+    {
+      icon: <FaPlaneArrival className="text-3xl text-black" />,
+      title: "Pick-up Service",
+      desc: "Convenient pick-up service for guests upon request.",
+    },
+    {
+      icon: <FaPlaneDeparture className="text-3xl text-black" />,
+      title: "Drop-off Service",
+      desc: "Safe and timely drop-off service available.",
+    },
+    {
+      icon: <FaUsers className="text-3xl text-black" />,
+      title: "Tourist Access",
+      desc: "Easy access to nearby attractions and activities.",
+    },
+  ];
 
   const exploreWayanad = [
     { img: "/soochipara.jpeg", title: "Soochipara Waterfalls" },
@@ -183,6 +206,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Luxury Intro Section */}
+
       <section className="py-16 md:py-24 bg-[#f9f9f7]">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Text */}
@@ -237,22 +261,18 @@ export default function Home() {
           </div>
 
           {/* Right Images */}
-          <div
-            data-aos="fade-left"
-            data-aos-delay="150"
-            className="grid grid-cols-2 gap-4 md:gap-5"
-          >
-            {/* LEFT TALL IMAGE */}
+          <div className="grid grid-cols-2 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[275px]">
+            {/* Left tall image */}
             <div className="col-span-1 row-span-2 overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/event.jpg"
                 alt="Luxury Poolside View"
-                className="w-full h-[400px] md:h-[550px] object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
 
-            {/* TOP RIGHT IMAGE */}
-            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105 h-[190px] md:h-[260px]">
+            {/* Top right */}
+            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/about2.jpg"
                 alt="Resort Evening"
@@ -260,8 +280,8 @@ export default function Home() {
               />
             </div>
 
-            {/* BOTTOM RIGHT IMAGE */}
-            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105 h-[190px] md:h-[260px]">
+            {/* Bottom right */}
+            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/hero1.jpg"
                 alt="Luxury Room"
@@ -275,10 +295,16 @@ export default function Home() {
       {/* === Room Slider === */}
       <section className="bg-white py-16 md:py-24">
         <div className="text-center mb-12 px-4">
-          <p className="text-3xl md:text-4xl tracking-[0.15em] text-[#c7a86f] mb-4" style={{ fontFamily: "'Cookie',cursive" }}>
+          <p
+            className="text-3xl md:text-4xl tracking-[0.15em] text-[#c7a86f] mb-4"
+            style={{ fontFamily: "'Cookie',cursive" }}
+          >
             Accommodation
           </p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2
+            className="text-4xl md:text-5xl font-semibold tracking-wide"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             CHOOSE YOUR STAY
           </h2>
         </div>
@@ -301,7 +327,9 @@ export default function Home() {
             {rooms.map((room, index) => {
               const imageSrc =
                 room.main_image ||
-                (room.images && room.images.length > 0 && room.images[0].image) ||
+                (room.images &&
+                  room.images.length > 0 &&
+                  room.images[0].image) ||
                 "/no-image.png";
 
               return (
@@ -326,14 +354,21 @@ export default function Home() {
 
                     {/* Info Card */}
                     <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 p-4 md:p-6">
-                      <h3 className="text-base md:text-lg font-semibold tracking-wide mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <h3
+                        className="text-base md:text-lg font-semibold tracking-wide mb-2"
+                        style={{ fontFamily: "'Playfair Display', serif" }}
+                      >
                         {room.title}
                       </h3>
                       <p className="text-xs md:text-sm text-gray-600 mb-2">
                         {room.size} | {room.guests}
                       </p>
                       <p className="text-sm text-gray-800">
-                        From <span className="text-[#c7a86f] font-medium">{room.price}</span> /night
+                        From{" "}
+                        <span className="text-[#c7a86f] font-medium">
+                          {room.price}
+                        </span>{" "}
+                        /night
                       </p>
                     </div>
                   </article>
@@ -348,7 +383,10 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-[#f9f9f7] border-t border-gray-200">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Title */}
-          <div data-aos="fade-up" className="lg:col-span-1 text-center lg:text-left">
+          <div
+            data-aos="fade-up"
+            className="lg:col-span-1 text-center lg:text-left"
+          >
             <p
               className="text-3xl md:text-4xl tracking-[0.15em] text-[#c7a86f] mb-4"
               style={{ fontFamily: "'Cookie',cursive" }}
@@ -362,14 +400,14 @@ export default function Home() {
               Facilities & Service
             </h2>
             <button
-                    data-aos="fade-up"
-                    data-aos-delay="450"
-                    onClick={() => navigate("/amenities")}
-                    className="bg-[#f5d36c] hover:bg-[#e0c45a] text-black px-8 py-3 uppercase tracking-widest text-sm font-semibold transition-all duration-300 shadow-md"
-                    style={{ fontFamily: "'Lato', sans-serif" }}
-                  >
-                    More Serivices
-                  </button>
+              data-aos="fade-up"
+              data-aos-delay="450"
+              onClick={() => navigate("/amenities")}
+              className="bg-[#f5d36c] hover:bg-[#e0c45a] text-black px-8 py-3 uppercase tracking-widest text-sm font-semibold transition-all duration-300 shadow-md"
+              style={{ fontFamily: "'Lato', sans-serif" }}
+            >
+              More Serivices
+            </button>
           </div>
 
           {/* Right Cards */}
@@ -504,8 +542,18 @@ export default function Home() {
       {/* === GALLERY SECTION === */}
       <section className="py-16 md:py-24 bg-[#f9f9f7]">
         <div className="text-center mb-12 px-4">
-          <p className="text-3xl md:text-4xl tracking-[0.15em] text-[#c7a86f] mb-4" style={{ fontFamily: "'Cookie', cursive" }}>Gallery</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Discover Our World</h2>
+          <p
+            className="text-3xl md:text-4xl tracking-[0.15em] text-[#c7a86f] mb-4"
+            style={{ fontFamily: "'Cookie', cursive" }}
+          >
+            Gallery
+          </p>
+          <h2
+            className="text-3xl md:text-5xl font-bold text-gray-900"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Discover Our World
+          </h2>
         </div>
 
         <GalleryGrid />
@@ -546,13 +594,13 @@ export default function Home() {
                   <div className="flex flex-col items-center text-center px-4">
                     <div className="flex justify-center mb-8">
                       <LazyImage
-                        src={t.avatar }
+                        src={t.avatar}
                         alt={t.name || "Guest"}
                         className="w-20 h-20 rounded-full border-4 border-white object-cover shadow-md"
                       />
                     </div>
                     <blockquote className="text-xl md:text-xl text-gray-800 leading-relaxed mb-10 font-medium">
-                      "{t.comment || 'No feedback provided.'}"
+                      "{t.comment || "No feedback provided."}"
                     </blockquote>
                     <div className="flex flex-col items-center">
                       <div className="w-12 h-[2px] bg-[#c7a86f] mb-4"></div>
@@ -582,7 +630,7 @@ export default function Home() {
             </button>
           </div>
         )}
-      </section>  
+      </section>
 
       {/* === Explore Wayanad SECTION === */}
       <section className="relative bg-[#f9f9f7] overflow-hidden w-full">
@@ -651,7 +699,8 @@ export default function Home() {
             className="text-gray-600 text-base md:text-lg text-center leading-relaxed max-w-3xl mx-auto mb-14"
             style={{ fontFamily: "'Lato', sans-serif" }}
           >
-            Experience the natural charm of Wayanad — from misty mountains to serene lakes and hidden waterfalls.
+            Experience the natural charm of Wayanad — from misty mountains to
+            serene lakes and hidden waterfalls.
           </p>
 
           {exploreWayanad.length > 0 && (
@@ -723,7 +772,6 @@ export default function Home() {
 
         {/* CONTENT WRAPPER */}
         <div className="relative max-w-[95%] mx-auto px-6 md:px-10 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
-          
           {/* ----- LEFT CONTENT ----- */}
           <div className="text-center md:text-left text-white drop-shadow-lg">
             <p
@@ -744,11 +792,12 @@ export default function Home() {
               className="text-lg leading-relaxed mb-8"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              Getting to our <strong>Lumarise Hotel, Sultan Bathery</strong> is easy and
-              convenient. Well-connected by road from Kozhikode, Bengaluru, and Mysuru,
-              travelers can reach us via car, taxi, or bus. Surrounded by scenic hills and
-              plantations, the journey itself is a delightful introduction to Wayanad’s
-              natural beauty, ensuring a smooth and pleasant arrival.
+              Getting to our <strong>Lumarise Hotel, Sultan Bathery</strong> is
+              easy and convenient. Well-connected by road from Kozhikode,
+              Bengaluru, and Mysuru, travelers can reach us via car, taxi, or
+              bus. Surrounded by scenic hills and plantations, the journey
+              itself is a delightful introduction to Wayanad’s natural beauty,
+              ensuring a smooth and pleasant arrival.
             </p>
 
             {/* GET DIRECTION BUTTON */}
