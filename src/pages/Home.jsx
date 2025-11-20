@@ -233,10 +233,7 @@ export default function Home() {
               className="text-gray-600 leading-relaxed mb-6"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              Lumarise Hotels & Resorts is a distinguished collection of luxury
-              hotels chosen for their rich heritage, enviable locations, and
-              personalized guest experience. Each destination tells a story —
-              revealed through its architecture, history, and charm.
+              Lumarise Hotels & Resorts is a distinguished collection of luxury escapes chosen for their rich heritage, enviable locations, and personalized guest experience. Our property in Sulthan Bathery, Wayanad, reflects this philosophy—each destination telling its own story through architecture, history, and timeless charm.
             </p>
 
             <p
@@ -245,8 +242,7 @@ export default function Home() {
               className="text-gray-600 leading-relaxed mb-10"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              This is the Lumarise legacy: distinctive hotels in coveted
-              destinations, crafted by people devoted to the art of hospitality.
+              This is the Lumarise legacy: distinctive hotels in coveted destinations, crafted by people devoted to the art of hospitality.
             </p>
 
             <button
@@ -260,35 +256,48 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Right Images */}
-          <div className="grid grid-cols-2 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[275px]">
+          {/* Right Image - Static Amoeba Shape with Hover Zoom */}
+          <div className="flex justify-center items-center">
+            <div 
+              className="relative w-full max-w-[650px] h-[500px] overflow-hidden shadow-2xl cursor-pointer"
+            >
+              <LazyImage
+                src="/hero1.jpg"
+                alt="Luxury Room"
+                className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+              />
+            </div>
+          </div>
+
+          {/* Commented out original grid layout */}
+          {/* <div className="grid grid-cols-2 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[275px]"> */}
             {/* Left tall image */}
-            <div className="col-span-1 row-span-2 overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105">
+            {/* <div className="col-span-1 row-span-2 overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/event.jpg"
                 alt="Luxury Poolside View"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Top right */}
-            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
+            {/* <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/about2.jpg"
                 alt="Resort Evening"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Bottom right */}
-            <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
+            {/* <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
               <LazyImage
                 src="/hero1.jpg"
                 alt="Luxury Room"
                 className="w-full h-full object-cover"
               />
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </section>
 
@@ -334,16 +343,16 @@ export default function Home() {
 
               return (
                 <SwiperSlide key={room.id || index}>
-                  <article className="relative group overflow-hidden shadow-lg cursor-pointer">
+                  <article className="relative group overflow-hidden shadow-lg cursor-pointer rounded-2xl">
                     <LazyImage
                       src={imageSrc}
                       alt={room.title || "Room"}
-                      className="w-full h-[350px] md:h-[420px]"
+                      className="w-full h-[420px] md:h-[500px] object-cover"
                       poster="/no-image.png"
                     />
 
                     {/* Overlay with button */}
-                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none rounded-2xl">
                       <Link
                         to={`/room/${room.id}`}
                         className="pointer-events-auto bg-white text-black px-6 py-2 uppercase tracking-widest text-sm font-semibold transition-all duration-300 hover:bg-[#c7a86f] hover:text-white"
@@ -353,16 +362,13 @@ export default function Home() {
                     </div>
 
                     {/* Info Card */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 p-4 md:p-6">
+                    <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 p-4 md:p-6 rounded-b-2xl">
                       <h3
                         className="text-base md:text-lg font-semibold tracking-wide mb-2"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                       >
                         {room.title}
                       </h3>
-                      <p className="text-xs md:text-sm text-gray-600 mb-2">
-                        {room.size} | {room.guests}
-                      </p>
                       <p className="text-sm text-gray-800">
                         From{" "}
                         <span className="text-[#c7a86f] font-medium">

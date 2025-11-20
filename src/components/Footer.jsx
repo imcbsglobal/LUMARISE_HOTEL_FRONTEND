@@ -74,6 +74,7 @@ export default function Footer({ isTranslucent = false }) {
             rel="noopener noreferrer"
             className="hover:text-[#d4af37] transition-all duration-300 block text-sm md:text-base font-sans"
           >
+            <p>Near Assumption Hospital,</p>
             <p>Sultan Bathery,</p>
             <p>Wayanad, Kerala - 673592</p>
             <p>India</p>

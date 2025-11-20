@@ -29,7 +29,7 @@ export default function About() {
               className="text-sm sm:text-base md:text-lg text-gray-600 mb-3 sm:mb-4 md:mb-6 leading-relaxed"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              Lumarise brings you a refined stay experience that blends modern comfort with the calm beauty of Wayanad. Every corner is thoughtfully designed to offer warmth, serenity, and a sense of effortless luxury.
+              Lumarise brings you a refined stay experience that blends modern comfort with the calm beauty of Wayanad. Located in the heart of Sulthan Bathery, every corner is thoughtfully designed to offer warmth, serenity, and an atmosphere of effortless luxury.
             </p>
 
             <p

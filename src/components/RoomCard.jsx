@@ -84,9 +84,6 @@ const Icons = Object.freeze({
   Wifi: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 8.6C7 4 17 4 22 8.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 11.6C8 9 16 9 19 11.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 14.6C10.5 12.6 13.5 12.6 16 14.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="18" r="1.5" fill="currentColor" /></svg>
   ),
-  Bath: () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 13h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M7 9V7a3 3 0 0 1 6 0v2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-  ),
   Ac: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.2"/><path d="M7 10h10M7 14h10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
   ),
@@ -95,9 +92,6 @@ const Icons = Object.freeze({
   ),
   Bed: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 7h18v10H3z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M7 7v-2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
-  ),
-  Pool: () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 12c4-2 8 2 12 0s8 2 12 0" stroke="currentColor" strokeWidth="1.2"/></svg>
   ),
   Hair: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 7h8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M6 11h12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
@@ -271,11 +265,9 @@ const MainSlider = React.memo(function MainSlider({ images, current, setCurrent,
 const AmenityList = React.memo(function AmenityList({ amenities = [] }) {
   const mapping = useMemo(() => ({
     wifi: { label: 'High speed WiFi', Icon: Icons.Wifi },
-    bathtub: { label: 'Bathtub', Icon: Icons.Bath },
     ac: { label: 'Air conditioner', Icon: Icons.Ac },
     tv: { label: 'Cable TV', Icon: Icons.Tv },
     bed: { label: 'King size bed', Icon: Icons.Bed },
-    pool: { label: 'Swimming pool', Icon: Icons.Pool },
     hairdryer: { label: 'Hair Dryer', Icon: Icons.Hair },
     towels: { label: 'Towels', Icon: Icons.Towel },
   }), []);
@@ -394,7 +386,7 @@ export default function RoomCard() {
       .filter(Boolean);
   }, [room?.images]);
 
-  const amenities = useMemo(() => room?.amenities || ['ac', 'bathtub', 'tv', 'wifi', 'bed', 'pool', 'hairdryer', 'towels'], [room?.amenities]);
+  const amenities = useMemo(() => room?.amenities || ['ac', 'tv', 'wifi', 'bed', 'hairdryer', 'towels'], [room?.amenities]);
 
   const setImageIfChanged = useCallback((index) => {
     setCurrentImage((prev) => {
@@ -442,11 +434,6 @@ export default function RoomCard() {
                 <div className="inline-flex items-center gap-1">
                   <span className="font-medium text-gray-800">Guests:</span> 
                   <span>{room.guests || 'N/A'}</span>
-                </div>
-                <span className="text-gray-400">•</span>
-                <div className="inline-flex items-center gap-1">
-                  <span className="font-medium text-gray-800">View:</span> 
-                  <span>{room.view || 'N/A'}</span>
                 </div>
               </div>
 

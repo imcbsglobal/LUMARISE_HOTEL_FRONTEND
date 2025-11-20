@@ -25,6 +25,7 @@ import BookingForm from "./pages/BookingForm";
 import ExploreWayanad from "./pages/ExploreWayanad";
 import Terms from "./pages/Terms";
 import Faq from "./pages/Faq";
+import SocialMedia from './components/SocialMedia';
 
 function App() {
   return (
@@ -83,6 +84,9 @@ function MainLayout() {
       </Routes>
 
       {shouldShowLayout && <Footer />}
+      
+      {/* 🌐 Floating Social Media - Shows on all pages except admin */}
+      {!isAdminRoute && <SocialMedia />}
     </>
   );
 }
