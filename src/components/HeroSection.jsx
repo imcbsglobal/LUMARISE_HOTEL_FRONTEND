@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const images = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
+const images = ["/banner3.jpg", "/banner2.jpg", "/banner1.jpg"];
 
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -67,16 +68,18 @@ export default function HeroSection() {
         </motion.h1>
 
         {/* CTA Button */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="bg-[#f5d36c] text-black px-7 py-3 sm:px-10 sm:py-4 
-                     text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase
-                     hover:bg-[#e0c45a] transition-all duration-300 shadow-lg"
-          style={{ fontFamily: "'Cinzel', serif" }}
-        >
-          View Our Rooms
-        </motion.button>
+        <Link to="/rooms">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="bg-[#f5d36c] text-black px-7 py-3 sm:px-10 sm:py-4 
+                      text-xs sm:text-sm md:text-base font-medium tracking-widest uppercase
+                      hover:bg-[#e0c45a] transition-all duration-300 shadow-lg"
+            style={{ fontFamily: "'Cinzel', serif" }}
+          >
+            View Our Rooms
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
   );

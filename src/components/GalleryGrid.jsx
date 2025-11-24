@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const BASE_URL = import.meta.env.VITE_API_URL || "https://lumarisehotel.com";
 
-export default function GalleryGrid({ maxItems = 9 }) {
+export default function GalleryGrid({ maxItems = 10 }) {
   const [media, setMedia] = useState([]);
   const navigate = useNavigate();
 
@@ -38,43 +38,57 @@ export default function GalleryGrid({ maxItems = 9 }) {
   const safeUrl = (item) => item?.url || "/fallback.jpg";
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Desktop Grid (hidden on mobile) */}
-      <div className="hidden md:grid grid-cols-6 gap-3 auto-rows-[180px]">
-        <div className="col-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[0])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+    <div className="mx-auto px-16 sm:px-14 lg:px-20">
+      {/* Desktop Grid (hidden on mobile) - Masonry Style with 5 columns */}
+      <div className="hidden md:grid grid-cols-5 gap-3">
+        {/* Column 1 - starts at top */}
+        <div className="space-y-3 mt-8">
+          <div className="aspect-[4/5] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[0])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div className="aspect-[4/3] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[1])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
         </div>
 
-        <div className="col-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[1])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        {/* Column 2 - offset down slightly */}
+        <div className="space-y-3">
+          <div className="aspect-[3/4] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[2])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div className="aspect-square overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[3])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
         </div>
 
-        <div className="col-span-2 row-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[2])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        {/* Column 3 - offset down more */}
+        <div className="space-y-3 mt-16">
+          <div className="aspect-square overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[4])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div className="aspect-[3/4] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[5])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
         </div>
 
-        <div className="col-span-1 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[3])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        {/* Column 4 - offset down */}
+        <div className="space-y-3">
+          <div className="aspect-[3/4] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[6])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div className="aspect-square overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[7])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
         </div>
 
-        <div className="col-span-1 row-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[4])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        </div>
-
-        <div className="col-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[5])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        </div>
-
-        <div className="col-span-1 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[6])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        </div>
-
-        <div className="col-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[7])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        </div>
-
-        <div className="col-span-2 overflow-hidden group rounded-sm">
-          <LazyImage src={safeUrl(media[8])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        {/* Column 5 - starts at top */}
+        <div className="space-y-3 mt-10">
+          <div className="aspect-[4/5] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[8])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <div className="aspect-[4/3] overflow-hidden group rounded-sm">
+            <LazyImage src={safeUrl(media[9])} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          </div>
         </div>
       </div>
 
