@@ -590,7 +590,7 @@ export default function Home() {
               modules={[Pagination, Navigation, Autoplay]}
               slidesPerView={1}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
+              pagination={false}
               navigation
               loop={testimonials.length >= 3}
               className="relative"
