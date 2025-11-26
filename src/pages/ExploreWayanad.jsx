@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Title, Meta } from "react-head";
 
 export default function ExploreWayanad() {
   const attractions = [
@@ -7,19 +8,19 @@ export default function ExploreWayanad() {
       title: "Soochipara Waterfalls",
       description:
         "A major tourist hotspot surrounded by dense forests, Soochipara Waterfalls offers a refreshing escape with its three-tiered cascade. Ideal for trekking and photography, it's one of the most scenic spots in Wayanad.",
-      image: "/soochipara.jpeg",
+      image: "/soochipara.webp",
     },
     {
       title: "Edakkal Caves",
       description:
         "These ancient caves feature prehistoric rock engravings dating back thousands of years. A steep climb rewards you with breathtaking valley views and a deep dive into Wayanad's ancient history.",
-      image: "/edakkal.jpeg",
+      image: "/edakkal.webp",
     },
     {
       title: "Banasura Sagar Dam",
       description:
         "India's largest earthen dam, surrounded by lush hills and ideal for speed boating. The scenic islands formed across the reservoir make it a must-visit attraction.",
-      image: "/banasura.jpeg",
+      image: "/banasura.webp",
     },
     {
       title: "Kuruva Island",
@@ -31,13 +32,13 @@ export default function ExploreWayanad() {
       title: "Chembra Peak",
       description:
         "Wayanad's highest peak, known for its heart-shaped lake 'Hridaya Saras'. A popular trekking destination with stunning views of the Western Ghats.",
-      image: "/chembra.jpeg",
+      image: "/chembra.webp",
     },
     {
       title: "Pookode Lake",
       description:
         "A freshwater lake nestled between forests and hills. Ideal for boating, nature walks, and enjoying Wayanad's serene ambience.",
-      image: "/pookode.jpeg",
+      image: "/pookode.webp",
     },
     {
       title: "Muthanga Wildlife Sanctuary",
@@ -49,88 +50,107 @@ export default function ExploreWayanad() {
       title: "Meenmutty Waterfalls",
       description:
         "A powerful three-tiered waterfall accessible via a thrilling trek. One of the most impressive and adventurous spots in Wayanad.",
-      image: "/meenmutty.jpeg",
+      image: "/meenmutty.webp",
     },
   ];
 
   const navigate = useNavigate();
 
   return (
-    <section className="bg-[#f9f9f7] py-12 sm:py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight px-2"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Explore Wayanad's Top Attractions
-          </h2>
-          <p
-            className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto px-4"
-            style={{ fontFamily: "'Lato', sans-serif" }}
-          >
-            From lush forests to ancient caves and misty mountains — every corner of Wayanad offers something unique. Discover the natural beauty and cultural heritage that make this destination unforgettable.
-          </p>
-        </div>
+    <>
+      {/* ================= SEO TAGS ================= */}
+      <Title>Explore Wayanad – Tourist Attractions Near Lumarise Residency</Title>
+      <Meta
+        name="description"
+        content="Discover top attractions in Wayanad near Lumarise Residency including Soochipara Falls, Edakkal Caves, Banasura Sagar Dam, Chembra Peak, Kuruva Island, and Muthanga Wildlife Sanctuary."
+      />
+      <Meta
+        name="keywords"
+        content="Wayanad attractions, places to visit Wayanad, tourist spots Sultan Bathery, Edakkal Caves, Soochipara Falls, Chembra Peak, Lumarise Residency"
+      />
+      <Meta property="og:title" content="Explore Wayanad – Top Attractions Near Lumarise Residency" />
+      <Meta
+        property="og:description"
+        content="Explore beautiful natural destinations, waterfalls, trekking spots, and wildlife sanctuaries near Lumarise Residency in Sultan Bathery."
+      />
+      <Meta property="og:url" content="https://lumarisehotel.com/explore-wayanad" />
+      <Meta property="og:type" content="website" />
 
-        {/* Attractions List */}
-        <div className="space-y-10 sm:space-y-12 md:space-y-16 lg:space-y-20">
-          {attractions.map((spot, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ${
-                index % 2 === 1 ? "md:direction-reverse" : ""
-              }`}
-              style={
-                index % 2 === 1 && window.innerWidth >= 768
-                  ? { direction: "rtl" }
-                  : {}
-              }
+      {/* ================= PAGE CONTENT ================= */}
+      <section className="bg-[#f9f9f7] py-12 sm:py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Header */}
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight px-2"
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              {/* Image */}
-              <div 
-                className="overflow-hidden rounded-xl sm:rounded-2xl shadow-lg"
-                style={
-                  index % 2 === 1 && window.innerWidth >= 768
-                    ? { direction: "ltr" }
-                    : {}
-                }
-              >
-                <img
-                  src={spot.image}
-                  alt={spot.title}
-                  loading="lazy"
-                  className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] transform transition-transform duration-700 hover:scale-110"
-                />
-              </div>
+              Explore Wayanad's Top Attractions
+            </h2>
+            <p
+              className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto px-4"
+              style={{ fontFamily: "'Lato', sans-serif" }}
+            >
+              From lush forests to ancient caves and misty mountains — every corner of Wayanad offers something unique. Discover the natural beauty and cultural heritage that make this destination unforgettable.
+            </p>
+          </div>
 
-              {/* Content */}
+          {/* Attractions List */}
+          <div className="space-y-10 sm:space-y-12 md:space-y-16 lg:space-y-20">
+            {attractions.map((spot, index) => (
               <div
-                className="px-2 sm:px-0"
+                key={index}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center ${
+                  index % 2 === 1 ? "md:direction-reverse" : ""
+                }`}
                 style={
                   index % 2 === 1 && window.innerWidth >= 768
-                    ? { direction: "ltr" }
+                    ? { direction: "rtl" }
                     : {}
                 }
               >
-                <h3
-                  className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#c7a86f] leading-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                <div
+                  className="overflow-hidden rounded-xl sm:rounded-2xl shadow-lg"
+                  style={
+                    index % 2 === 1 && window.innerWidth >= 768
+                      ? { direction: "ltr" }
+                      : {}
+                  }
                 >
-                  {spot.title}
-                </h3>
-                <p
-                  className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  <img
+                    src={spot.image}
+                    alt={spot.title}
+                    loading="lazy"
+                    className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] transform transition-transform duration-700 hover:scale-110"
+                  />
+                </div>
+
+                <div
+                  className="px-2 sm:px-0"
+                  style={
+                    index % 2 === 1 && window.innerWidth >= 768
+                      ? { direction: "ltr" }
+                      : {}
+                  }
                 >
-                  {spot.description}
-                </p>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#c7a86f] leading-tight"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    {spot.title}
+                  </h3>
+                  <p
+                    className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed"
+                    style={{ fontFamily: "'Lato', sans-serif" }}
+                  >
+                    {spot.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

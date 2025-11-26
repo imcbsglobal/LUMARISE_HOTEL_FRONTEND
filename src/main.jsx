@@ -4,14 +4,17 @@ import App from './App.jsx';
 import './index.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HeadProvider } from "react-head";
 
 AOS.init({
   duration: 800,
   once: true,
 });
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <HeadProvider>
+      <App />
+    </HeadProvider>
   </React.StrictMode>
 );

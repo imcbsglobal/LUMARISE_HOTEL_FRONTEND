@@ -1,22 +1,42 @@
 import React from "react";
+import { Title, Meta } from "react-head";
 
 export default function About() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Title>About Lumarise Residency – Hotel in Sultan Bathery, Wayanad</Title>
+      <Meta
+        name="description"
+        content="Learn about Lumarise Residency in Sultan Bathery, Wayanad – a comfort-focused hotel offering warm hospitality, modern rooms and a calm ambience."
+      />
+      <Meta
+        name="keywords"
+        content="About Lumarise Residency, about Lumarise Hotel, hotel story Sultan Bathery, Wayanad hospitality"
+      />
+      <Meta name="robots" content="index,follow" />
+      <Meta property="og:title" content="About Lumarise Residency – Wayanad" />
+      <Meta
+        property="og:description"
+        content="Know more about Lumarise Residency, a hotel in Sultan Bathery blending modern comfort with Wayanad’s natural charm."
+      />
+      <Meta property="og:url" content="https://lumarisehotel.com/about" />
+      <Meta property="og:type" content="website" />
+      <Meta property="og:image" content="https://lumarisehotel.com/og-cover.jpg" />
+      <Meta rel="canonical" href="https://lumarisehotel.com/about" />
+
       {/* === ABOUT HERO SECTION === */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#faf7f2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-          {/* Left: Image */}
           <div className="relative w-full order-1 md:order-1">
             <img
               src="/about-main.jpg"
-              alt="Resort Exterior"
+              alt="Lumarise Residency Sultan Bathery Exterior"
               loading="lazy"
               className="rounded-xl sm:rounded-2xl shadow-lg w-full h-[280px] sm:h-[320px] md:h-[400px] lg:h-[480px] object-cover"
             />
           </div>
 
-          {/* Right: Text Content */}
           <div className="w-full order-2 md:order-2">
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-5 leading-tight"
@@ -60,7 +80,6 @@ export default function About() {
             </p>
           </div>
 
-          {/* Three Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
             {[
               {
@@ -102,7 +121,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* === RATINGS & RECOGNITION SECTION === */}
+      {/* === RATINGS SECTION === */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#faf7f2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <h2
@@ -119,56 +138,52 @@ export default function About() {
             earned recognition for our dedication to hospitality and excellence.
           </p>
 
-          {/* Ratings & Awards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-10 max-w-4xl mx-auto">
-            {/* TripAdvisor */}
             <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300">
               <img
                 src="/tripadvisor.png"
-                alt="TripAdvisor"
-                className="h-8 sm:h-10 md:h-12 mx-auto mb-3 sm:mb-4 inline-block"
+                alt="TripAdvisor rating Lumarise Hotel"
+                className="h-8 sm:h-10 md:h-12 mx-auto mb-3 sm:mb-4"
                 loading="lazy"
               />
               <h3
-                className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2 leading-tight"
+                className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                TripAdvisor Traveller's Choice
+                TripAdvisor Traveller&apos;s Choice
               </h3>
               <p
-                className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 sm:mb-3"
+                className="text-xs sm:text-sm md:text-base text-gray-600 mb-2"
                 style={{ fontFamily: "'Lato', sans-serif" }}
               >
                 Rated 4.8/5 by happy travelers
               </p>
-              <div className="flex justify-center gap-0.5 sm:gap-1 text-[#f5d36c] text-lg sm:text-xl" aria-hidden>
-                <span className="sr-only">5 out of 5 stars</span>
+              <div className="flex justify-center gap-1 text-[#f5d36c] text-lg sm:text-xl">
                 {"★★★★★"}
               </div>
             </div>
 
-            {/* Google Reviews */}
             <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300">
               <img
                 src="/google.png"
-                alt="Google Reviews"
-                className="h-8 sm:h-10 md:h-12 mx-auto mb-3 sm:mb-4 inline-block"
+                alt="Google reviews Lumarise Hotel"
+                className="h-8 sm:h-10 md:h-12 mx-auto mb-3 sm:mb-4"
                 loading="lazy"
               />
               <h3
-                className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2 leading-tight"
+                className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Google Reviews
               </h3>
               <p
-                className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 sm:mb-3"
+                className="text-xs sm:text-sm md:text-base text-gray-600 mb-2"
                 style={{ fontFamily: "'Lato', sans-serif" }}
               >
                 Over 250+ 5-star reviews
               </p>
-              <div className="flex justify-center gap-0.5 sm:gap-1 text-[#f5d36c] text-lg sm:text-xl" aria-hidden>
-                <span className="sr-only">5 out of 5 stars</span>
+
+              <div className="flex justify-center gap-1 text-[#f5d36c] text-lg sm:text-xl">
                 {"★★★★★"}
               </div>
             </div>

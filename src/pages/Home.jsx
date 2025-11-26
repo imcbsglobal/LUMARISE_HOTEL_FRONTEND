@@ -24,6 +24,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { useNavigate, Link } from "react-router-dom";
 import GalleryGrid from "../components/GalleryGrid";
+import { Title, Meta } from "react-head";
+
 
 // ✅ Optimized LazyImage Component
 const LazyImage = memo(function LazyImage({
@@ -191,18 +193,60 @@ export default function Home() {
   ];
 
   const exploreWayanad = [
-    { img: "/soochipara.jpeg", title: "Soochipara Waterfalls" },
-    { img: "/edakkal.jpeg", title: "Edakkal Caves" },
-    { img: "/banasura.jpeg", title: "Banasura Sagar Dam" },
+    { img: "/soochipara.webp", title: "Soochipara Waterfalls" },
+    { img: "/edakkal.webp", title: "Edakkal Caves" },
+    { img: "/banasura.webp", title: "Banasura Sagar Dam" },
     { img: "/kuruvadweep.jpeg", title: "Kuruva Island" },
-    { img: "/chembra.jpeg", title: "Chembra Peak" },
-    { img: "/pookode.jpeg", title: "Pookode Lake" },
+    { img: "/chembra.webp", title: "Chembra Peak" },
+    { img: "/pookode.webp", title: "Pookode Lake" },
     { img: "/muthanga.jpeg", title: "Muthanga Wildlife Sanctuary" },
-    { img: "/meenmutty.jpeg", title: "Meenmutty Waterfalls" },
+    { img: "/meenmutty.webp", title: "Meenmutty Waterfalls" },
   ];
 
   return (
     <>
+    <Title>Lumarise Residency – Hotel in Sultan Bathery, Wayanad</Title>
+      <Meta name="description" content="Lumarise Residency is a premium stay near Assumption Hospital, Sultan Bathery, Wayanad. Spacious rooms, free Wi-Fi and access to top attractions." />
+      <Meta name="keywords" content="hotel in Sultan Bathery, Lumarise Residency, Wayanad stay, hotels near Assumption Hospital" />
+      <Meta property="og:title" content="Lumarise Residency – Hotel in Sultan Bathery, Wayanad" />
+      <Meta property="og:description" content="Premium hotel stay with modern rooms in Wayanad near Assumption Hospital." />
+      <Meta property="og:type" content="hotel" />
+      <Meta property="og:url" content="https://lumarisehotel.com" />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          name: "Lumarise Residency",
+          url: "https://lumarisehotel.com/",
+          telephone: "+91 86060 33337",
+          email: "lumarisehotels@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Near Assumption Hospital",
+            addressLocality: "Sultan Bathery",
+            addressRegion: "Wayanad, Kerala",
+            postalCode: "673592",
+            addressCountry: "IN",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 11.6620025,
+            longitude: 76.2542256,
+          },
+          image: [
+            "https://lumarisehotel.com/hero1.jpg",
+            "https://lumarisehotel.com/explore_banner.webp"
+          ],
+          priceRange: "₹2000–₹6000",
+          sameAs: [
+            "https://www.google.com/maps/place/Lumarise+Hotel/",
+            "https://www.instagram.com/lumarisehotels?igsh=c3NhcHhjOTl4OWxq&utm_source=qr",
+            "https://www.facebook.com/share/17m7XUM9qq/?mibextid=wwXIfr"
+          ]
+        })}
+      </script>
+
       <HeroSection />
 
       {/* Luxury Intro Section */}
@@ -261,43 +305,13 @@ export default function Home() {
             <div 
               className="relative w-full max-w-[650px] h-[500px] overflow-hidden shadow-2xl cursor-pointer"
             >
-              <LazyImage
-                src="/hero1.jpg"
-                alt="Luxury Room"
+              <LazyImage 
+                src="/hero1.jpg" 
+                alt="Lumarise Residency luxury room in Sultan Bathery, Wayanad"
                 className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110"
               />
             </div>
           </div>
-
-          {/* Commented out original grid layout */}
-          {/* <div className="grid grid-cols-2 gap-4 md:gap-5 auto-rows-[200px] md:auto-rows-[275px]"> */}
-            {/* Left tall image */}
-            {/* <div className="col-span-1 row-span-2 overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105">
-              <LazyImage
-                src="/event.jpg"
-                alt="Luxury Poolside View"
-                className="w-full h-full object-cover"
-              />
-            </div> */}
-
-            {/* Top right */}
-            {/* <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
-              <LazyImage
-                src="/about2.jpg"
-                alt="Resort Evening"
-                className="w-full h-full object-cover"
-              />
-            </div> */}
-
-            {/* Bottom right */}
-            {/* <div className="overflow-hidden shadow-md transform transition-all duration-700 hover:scale-105">
-              <LazyImage
-                src="/hero1.jpg"
-                alt="Luxury Room"
-                className="w-full h-full object-cover"
-              />
-            </div> */}
-          {/* </div> */}
         </div>
       </section>
 
@@ -464,17 +478,17 @@ export default function Home() {
         >
           {[
             {
-              image: "/discover1.jpg",
+              image: "/discover1.webp",
               title: "Discover A Place",
               text: "Our hotel's central location offers easy access to the city's most iconic attractions, premium shopping, fine dining, and vibrant nightlife.",
             },
             {
-              image: "/discover2.jpg",
+              image: "/discover2.webp",
               title: "Stay in Style",
               text: "Experience world-class interiors and breathtaking views from every suite, curated for the modern traveler.",
             },
             {
-              image: "/contact-bg.jpg",
+              image: "/contact-bg.webp",
               title: "Unmatched Comfort",
               text: "Relax and rejuvenate in spacious rooms designed with contemporary elegance and luxury amenities.",
             },
@@ -671,7 +685,7 @@ export default function Home() {
 
         <div className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
           <img
-            src="/explore_banner.jpg"
+            src="/explore_banner.webp"
             alt="Explore Wayanad"
             className="absolute top-0 left-0 w-full h-full object-cover"
           />
@@ -729,7 +743,7 @@ export default function Home() {
                     <div className="overflow-hidden">
                       <LazyImage
                         src={place.img}
-                        alt={place.title}
+                        alt={`${place.title} near Lumarise Residency, Wayanad`}
                         className="w-full h-[200px] md:h-[250px] object-cover transform hover:scale-110 transition-transform duration-700"
                       />
                     </div>

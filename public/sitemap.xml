@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lumarisehotel.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/rooms</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/amenities</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/explore-wayanad</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/about</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/booking</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/faq</loc>
+  </url>
+  <url>
+    <loc>https://lumarisehotel.com/terms</loc>
+  </url>
+</urlset>

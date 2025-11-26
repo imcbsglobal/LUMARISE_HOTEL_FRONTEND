@@ -159,15 +159,15 @@ const RoomForm = memo(function RoomForm({
           value={formData.title}
           onChange={handleChange}
         >
-          <option value="">Select Room Type</option>
+          <option value="">SELECT ROOM TYPE</option>
           <option value="COUPLE SUITE">COUPLE SUITE</option>
-          <option value="EXECUTIVE ROOM (P)">PREMIUM EXECUTIVE ROOM</option>
-          <option value="DULEX ROOM (P)">PREMIUM DULEX ROOM</option>
+          <option value="PREMIUM EXECUTIVE ROOM">PREMIUM EXECUTIVE ROOM</option>
+          <option value="PREMIUM DELUXE ROOM">PREMIUM DELUXE ROOM</option>
           <option value="SUITE ROOM">SUITE ROOM</option>
-          <option value="DORMITRY">DORMITORY</option>
+          <option value="DORMITORY">DORMITORY</option>
           <option value="EXECUTIVE ROOM">EXECUTIVE ROOM</option>
-          <option value="PREMIUM SUITE ROOM">PREMIUM SUITE ROOM</option>
-          <option value="DULEX ROOM">DULEX ROOM</option>
+          <option value="PREMIUM SUITE">PREMIUM SUITE</option>
+          <option value="DELUXE ROOM">DELUXE ROOM</option>
         </select>
       </div>
 
