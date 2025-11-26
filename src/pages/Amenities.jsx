@@ -18,48 +18,48 @@ export default function Amenities() {
   const facilities = [
     {
       icon: <FaBath className="text-2xl sm:text-3xl text-black" />,
-      title: "Hot Water",
-      desc: "24/7 hot water available for all rooms.",
+      title: "Hot Water & Clean Facilities",
+      desc: "24/7 hot water, premium towels, hair-dryer, and spotless bathrooms in all 33 rooms.",
     },
     {
       icon: <FaBolt className="text-2xl sm:text-3xl text-black" />,
-      title: "Power Backup",
-      desc: "Uninterrupted electricity with full power backup.",
+      title: "AC & Power Backup",
+      desc: "Air-conditioned rooms with uninterrupted power supply ensuring comfort throughout your stay.",
     },
     {
       icon: <FaWifi className="text-2xl sm:text-3xl text-black" />,
-      title: "Free Wi-Fi",
-      desc: "High-speed Wi-Fi access throughout the property.",
+      title: "High-Speed Wi-Fi",
+      desc: "Complimentary high-speed Wi-Fi throughout the property for seamless connectivity.",
     },
     {
       icon: <FaCar className="text-2xl sm:text-3xl text-black" />,
       title: "Private Parking",
-      desc: "Secure private parking for all guests.",
+      desc: "Spacious, secure private parking available for all guests at no extra charge.",
     },
     {
       icon: <FaVideo className="text-2xl sm:text-3xl text-black" />,
       title: "CCTV Security",
-      desc: "24/7 surveillance ensuring complete guest safety.",
+      desc: "24/7 CCTV surveillance ensuring complete safety and peace of mind for families and groups.",
     },
     {
       icon: <FaBroom className="text-2xl sm:text-3xl text-black" />,
-      title: "Housekeeping",
-      desc: "Daily housekeeping to keep your stay comfortable.",
+      title: "Daily Housekeeping",
+      desc: "Professional daily housekeeping service maintaining cleanliness and comfort in every room.",
     },
     {
       icon: <FaPlaneArrival className="text-2xl sm:text-3xl text-black" />,
       title: "Pick-up Service",
-      desc: "Convenient pick-up service for guests upon request.",
+      desc: "Convenient airport and station pick-up service available on request for hassle-free arrival.",
     },
     {
       icon: <FaPlaneDeparture className="text-2xl sm:text-3xl text-black" />,
       title: "Drop-off Service",
-      desc: "Safe and timely drop-off service available.",
+      desc: "Reliable drop-off service to railway station, airport, or tourist destinations across Wayanad.",
     },
     {
       icon: <FaUsers className="text-2xl sm:text-3xl text-black" />,
-      title: "Tourist Access",
-      desc: "Easy access to nearby attractions and activities.",
+      title: "Tourist Assistance",
+      desc: "Easy access to Wayanad's top attractions with travel guidance and tour support from our team.",
     },
   ];
 
@@ -73,19 +73,19 @@ export default function Amenities() {
   return (
     <>
       {/* ================= SEO TAGS ================= */}
-      <Title>Amenities at Lumarise Residency – Sultan Bathery, Wayanad</Title>
+      <Title>Premium Room Amenities – Lumarise Residency Sulthan Bathery</Title>
       <Meta
         name="description"
-        content="Explore amenities at Lumarise Residency including hot water, free Wi-Fi, private parking, CCTV security, housekeeping and pickup/drop services."
+        content="rooms with AC, high-speed Wi-Fi, king-size beds, cable TV, towels, hair-dryer, hot water, parking, CCTV security at Lumarise Residency, Sulthan Bathery, Wayanad."
       />
       <Meta
         name="keywords"
-        content="Lumarise amenities, hotel facilities Sultan Bathery, WiFi hotel Wayanad, parking, CCTV, pickup drop Wayanad"
+        content="AC rooms Wayanad, king-size beds Sulthan Bathery, WiFi accommodation Wayanad, cable TV rooms, premium facilities, parking Wayanad, room amenities Sulthan Bathery"
       />
-      <Meta property="og:title" content="Amenities – Lumarise Residency" />
+      <Meta property="og:title" content="Premium Room Amenities – Lumarise Residency" />
       <Meta
         property="og:description"
-        content="Comfortable stay with essential and premium amenities at Lumarise Residency in Sultan Bathery."
+        content="Modern rooms with AC, Wi-Fi, king-size beds, and premium facilities. Experience comfort and convenience at Lumarise Residency."
       />
       <Meta property="og:url" content="https://lumarisehotel.com/amenities" />
       <Meta property="og:type" content="website" />

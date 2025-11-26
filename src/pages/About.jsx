@@ -5,20 +5,20 @@ export default function About() {
   return (
     <>
       {/* ================= SEO ================= */}
-      <Title>About Lumarise Residency – Hotel in Sultan Bathery, Wayanad</Title>
+      <Title>About Lumarise Residency – Premium Rooms Sulthan Bathery</Title>
       <Meta
         name="description"
-        content="Learn about Lumarise Residency in Sultan Bathery, Wayanad – a comfort-focused hotel offering warm hospitality, modern rooms and a calm ambience."
+        content="Discover Lumarise Residency in Sulthan Bathery – 33 premium rooms offering comfort, warmth, and modern amenities. Transforming accommodation in Wayanad with accessible pricing."
       />
       <Meta
         name="keywords"
-        content="About Lumarise Residency, about Lumarise Hotel, hotel story Sultan Bathery, Wayanad hospitality"
+        content="About Lumarise Residency, premium accommodation Wayanad, Sulthan Bathery residency, comfortable stay Wayanad, guest-focused hospitality"
       />
       <Meta name="robots" content="index,follow" />
-      <Meta property="og:title" content="About Lumarise Residency – Wayanad" />
+      <Meta property="og:title" content="About Lumarise Residency – Premium Rooms Sulthan Bathery" />
       <Meta
         property="og:description"
-        content="Know more about Lumarise Residency, a hotel in Sultan Bathery blending modern comfort with Wayanad’s natural charm."
+        content="premium rooms & dormitories in Sulthan Bathery blending comfort, modern amenities, and value pricing. Experience the Lumarise difference."
       />
       <Meta property="og:url" content="https://lumarisehotel.com/about" />
       <Meta property="og:type" content="website" />

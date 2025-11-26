@@ -109,19 +109,19 @@ export default function Rooms() {
   return (
     <>
       {/* ===================== SEO Meta ===================== */}
-      <Title>Rooms at Lumarise Residency – Luxury Stay in Sultan Bathery, Wayanad</Title>
+      <Title>Premium Rooms in Sulthan Bathery | Lumarise Residency</Title>
       <Meta
         name="description"
-        content="Explore premium rooms at Lumarise Residency in Sultan Bathery, Wayanad. Book deluxe, executive and suite rooms with modern facilities."
+        content="Book premium rooms & dormitories at Lumarise Residency, Sulthan Bathery. AC, Wi-Fi, king-size beds, parking. Up to 30% off. Best accommodation in Wayanad."
       />
       <Meta
         name="keywords"
-        content="rooms in Sultan Bathery, Wayanad hotels, deluxe rooms Wayanad, suite rooms bathery, Lumarise rooms list, hotel booking Wayanad"
+        content="rooms in Sulthan Bathery, premium residency Wayanad, accommodation near Sulthan Bathery, hotel rooms Wayanad, affordable luxury rooms, Wayanad room booking, best stay Wayanad"
       />
-      <Meta property="og:title" content="Rooms – Lumarise Residency | Sultan Bathery" />
+      <Meta property="og:title" content="Premium Rooms in Sulthan Bathery | Lumarise Residency" />
       <Meta
         property="og:description"
-        content="Choose the perfect room for your luxury stay at Lumarise Residency with modern comfort and easy booking."
+        content="comfortable rooms with modern amenities in Sulthan Bathery. Up to 30% off on bookings. Experience premium comfort at accessible pricing."
       />
       <Meta property="og:url" content="https://lumarisehotel.com/rooms" />
       <Meta property="og:type" content="website" />

@@ -205,11 +205,11 @@ export default function Home() {
 
   return (
     <>
-    <Title>Lumarise Residency – Hotel in Sultan Bathery, Wayanad</Title>
-      <Meta name="description" content="Lumarise Residency is a premium stay near Assumption Hospital, Sultan Bathery, Wayanad. Spacious rooms, free Wi-Fi and access to top attractions." />
-      <Meta name="keywords" content="hotel in Sultan Bathery, Lumarise Residency, Wayanad stay, hotels near Assumption Hospital" />
-      <Meta property="og:title" content="Lumarise Residency – Hotel in Sultan Bathery, Wayanad" />
-      <Meta property="og:description" content="Premium hotel stay with modern rooms in Wayanad near Assumption Hospital." />
+    <Title>Premium Rooms in Sulthan Bathery | Lumarise Residency Wayanad</Title>
+      <Meta name="description" content="Book premium rooms & dormitories at Lumarise Residency, Sulthan Bathery. Up to 30% off on comfortable accommodation with AC, Wi-Fi, parking. Call +91 86060 33337." />
+      <Meta name="keywords" content="rooms in Sulthan Bathery, premium residency Wayanad, accommodation Sulthan Bathery, hotel rooms Wayanad, best stay Wayanad, affordable luxury rooms, Wayanad room booking" />
+      <Meta property="og:title" content="Premium Rooms in Sulthan Bathery | Lumarise Residency Wayanad" />
+      <Meta property="og:description" content=" premium rooms in Sulthan Bathery with modern amenities. Up to 30% off. Experience comfort & warmth at Lumarise Residency." />
       <Meta property="og:type" content="hotel" />
       <Meta property="og:url" content="https://lumarisehotel.com" />
 
